@@ -19,6 +19,7 @@ A continuación, se presentan aquellos resultados más relevantes relacionados a
 
 # Tabla de eficiencia
 Una vez entrenado un modelo es sumamente importante identificar grupos de mayor riesgo ya que serán estos registros los que serán gestionados para evitar su fuga, en los resultados que se presentan a continuación se muestra que un grupo candidato podrían ser aquellos registros que tienen una probabilidad de fuga que va entre 0.9 y 1.
+
 [![Modelo-3.png](https://i.postimg.cc/8zpJCsPt/Modelo-3.png)](https://postimg.cc/ppSXGWjF)
 
 # Importancia de las variables
