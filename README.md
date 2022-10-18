@@ -7,7 +7,7 @@ En este repositorio encontraran distintas herramientas para definir estrategias 
 Particularmente se trabajo de la siguiente manera:
 * Se utilizó el modelo RandomForest, una metodología que se basa en árboles de decisiones.
 * Se construyó una base de datos con 1000 registros y una tasa de fuga del 15%.
-* Los datos se construyeron a partir de supuestos plausibles sobre el comportamiento de los clientes en los 12 meses anteriores al mes de referencia, condicionado sobre si se fugará o no el próximo mes.
+* Los datos se construyeron a partir de supuestos plausibles sobre el comportamiento de los clientes en los 12 meses anteriores al mes de referencia, condicionado sobre si se fugará (fuga=1) o no (fuga=0) el próximo mes.
 * Las variables históricas para los clientes que se fugaban seguían una distribución beta decreciente y los que no una distribución normal, en ambos casos se agregó ruido a través de una distribución uniforme y mezclas de tendencias.
 * Las variables que se construyeron fueron: total de la compra mensual, porcentage del pedido descongelado, nivel de satisfacción, tiempo de espera, diversidad de la canasta, antigüedad del cliente, tipo de cliente y aquellas relacionadas con su variacion temporal.
 * El modelo fue construido a través de una muestra de construcción, validado mediante cross-validation y testeado en una muestra out of sample.
