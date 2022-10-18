@@ -47,6 +47,6 @@ De los resultados presentados, es posible observar que las personas que se fugan
 
 De la figura anterior, es posible observar que las variables más importantes tienden a tomar valores muy altos entre las personas que se fugan por lo cual deberían ser temas de interés.
 
-# Resumen
+# Conclusión
 
-En base a los resultados presentados es posible observar que se debe desarrollar mejores prácticas que estén enfocadas en la disminución del tiempo de espera, como lo podría ser el desarrollar mejores planes de distribución o el uso de modelos de predicción de la demanda y que permitan tener un stock suficiente para responder de forma inmediata a las necesidades del cliente. Por otro lado, se recomienda el utilizar mejores sistemas de congelamiento para evitar que los productos se descongelen. Finalmente, en base a los resultados, se sugiere el utilizar la satisfacción del cliente como un indicador que gatille distintos tipos de acciones como el incorporar descuentos a la compra.
+En base a los resultados presentados es posible observar que se debe desarrollar mejores prácticas que estén enfocadas en la disminución del tiempo de espera, como lo podría ser el desarrollar mejores planes de distribución o el uso de modelos de predicción de la demanda y que permitan tener un stock suficiente para responder de forma inmediata a las necesidades del cliente. Por otro lado, se recomienda el utilizar mejores sistemas de congelamiento para evitar que los productos pierdan su calidad. Finalmente, en base a los resultados, se sugiere el utilizar la satisfacción del cliente como un indicador que gatille distintos tipos de acciones como el incorporar descuentos a la compra.
