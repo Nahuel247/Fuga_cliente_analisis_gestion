@@ -13,9 +13,6 @@
 # IMPORTAMOS LAS LIBRERIAS DE INTERÉS
 ########################################
 
-
-import numpy as np
-import pandas as pd
 import shap
 
 import warnings
@@ -178,12 +175,13 @@ def box_plot(data,features,variable_respuesta):
 
 
 ############################################
-#
+# Generamos los gráficos de interés
 ############################################
 
 # Indentificamos las variables más importantes
 n_variables=10
-var_importantes=X_train.columns[sorted_idx][-n_variables:]
+sorted_idx = modelo.feature_importances_.argsort()[::-1]
+var_importantes=X_train.columns[sorted_idx]
 variable_respuesta="fuga"
 
 # Definimos paleta de colores
@@ -191,29 +189,23 @@ cluster_colors = ['#b4d2b1', '#d15252'] #['#b4d2b1', '#568f8b', '#1d4a60', '#cd7
 
 # Ploteamos la importancia de las variables
 sns.set(font_scale=1)
-sorted_idx = modelo.feature_importances_.argsort()
-plt.barh(X_train.columns[sorted_idx][-n_variables:], modelo.feature_importances_[sorted_idx][-n_variables:])
+plt.barh(X_train.columns[sorted_idx][0:n_variables][::-1], modelo.feature_importances_[sorted_idx][0:n_variables][::-1])
 plt.xlabel("Importancia de las variables")
 
 
 # Boxplot según variable respuesta
-sns.set(font_scale=1.3)
-box_plot(data_artificial,var_importantes, variable_respuesta)
+sns.set(font_scale=0.8)
+box_plot(data_artificial,var_importantes[0:n_variables], variable_respuesta)
 
 # Desviación porcentual en relación al promedio
-desviacion_porcentual(data_artificial[list(var_importantes)+["fuga"]],2,"fuga", cluster_colors, title="Desviación porcentual según categoría")
+desviacion_porcentual(data_artificial[list(var_importantes[0:n_variables])+["fuga"]],2,"fuga", cluster_colors, title="Desviación porcentual según categoría")
 
 # RADAR
-n_variables=12
-var_importantes=X_train.columns[sorted_idx][-n_variables:]
-radar(data_artificial,variable_respuesta,var_importantes)
+n_variables2=12
+radar(data_artificial,variable_respuesta,var_importantes[0:n_variables2])
 
 
 ############
-
-
-
-
 
 explainer = shap.TreeExplainer(modelo)
 shap_values = explainer.shap_values(X_test)
